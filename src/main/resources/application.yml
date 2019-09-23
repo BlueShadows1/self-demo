@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    schema: classpath:db/schema-h2.sql
+    data: classpath:db/data-h2.sql
+    url: jdbc:h2:mem:test
+    username: root
+    password: test
+  redis:
+    host: 10.16.21.241
+    port: 6379
+  security:
+    user:
+      name: admin
+      password: admin
+  main:
+    allow-bean-definition-overriding: true
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+logging:
+  level:
+    com.example.demo.dao: debug
+
+
+security:
+  oauth2:
+    client:
+      client-id: clientId
+      client-secret: secret
+      scope: scope1, scope2
+      registered-redirect-uri: http:www.baidu.com
+     
+server:  port: 8080
+
