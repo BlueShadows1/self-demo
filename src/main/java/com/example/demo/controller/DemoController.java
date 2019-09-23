@@ -36,7 +36,7 @@ public class DemoController {
     @LogAnnotation(desc = "注解测试")
     @RequestMapping(value = "test3")
     public Object test3() {
-    	System.out.println("just do it");
+    	System.out.println("这是运行时");
     	return "Just Test";  
     }
     

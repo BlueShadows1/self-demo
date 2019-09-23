@@ -27,11 +27,12 @@ public class LogAspect {
         className = className.substring(className.indexOf("com"));  
         String signature = jp.getSignature().toString();//获取目标方法签名  
         System.out.println("signature:" + signature);
+        System.out.println("这是return");
 	}
 	
 	@Before("within(com.example.demo.controller..*) && @annotation(rl)")
 	public void addBeforeLog(JoinPoint jp, LogAnnotation rl) {
-		System.out.println("进入方法之前");
+		System.out.println("这是before");
 	}
 	
 	@Around("within(com.example.demo.controller..*) && @annotation(rl)")
